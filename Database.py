@@ -53,6 +53,6 @@ user_input = st.text_input("Enter the Prompt....")
 if st.button("Find Data"):
     result = query_llm(user_input)
     sql_query = extract_sql_code(result)
-    # st.write(sql_query)
-    # print(sql_query)
+    st.write(sql_query)
+    print(sql_query)
     st.table(query_db(sql_query))
